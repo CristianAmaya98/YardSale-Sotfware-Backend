@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "26703b66-9a0f-403a-89e4-09cc3da7a55c",
+		"name": "YarSale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Registrar Producto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "TOPHYQSOUCHLPPYRDRHQZTZSOT",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\": {\r\n        \"name\": \"Celular Nokia 6300 - 4gb Negro\",\r\n        \"image\": \"641bc980baed600a9aa74314\",\r\n        \"price\": \"396900\"\r\n    },\r\n    \"available\": true,\r\n    \"discounts\": {\r\n        \"enabled\": false,\r\n        \"percentageDiscount\": \"0\"\r\n    },\r\n    \"info\": {\r\n        \"category\": \"641bbd5a3d4d34cc60035782\",\r\n        \"description\": \"Vive tus redes sociales con Nokia 6300 4G. Mantente conectado con todos tus seres queridos con WhatsApp y Facebook. Mantente al día con tu contenido favorito en YouTube y encuentra tu camino con Google Maps, todas estas experiencias son aún mejores y optimizadas con la velocidad 4G. Además, puedes encontrar respuestas, obtener información y comunicarte con amigos con Google Assistant. Además, ten conversaciones por más tiempo gracias a su diseño duradero.\",\r\n        \"colors\": [\r\n            \"BLANCO\",\r\n            \"NEGRO\",\r\n            \"AZUL\"\r\n        ],\r\n        \"amount\": 10\r\n    },\r\n    \"characteristics\": [\r\n        {\r\n            \"title\": \"Características generales\",\r\n            \"data\": [\r\n                {\r\n                    \"item\": \"Marca\",\r\n                    \"value\": \"Nokia\"\r\n                },\r\n                {\r\n                    \"item\": \"Modelo\",\r\n                    \"value\": \"6300 4G\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"Tarjeta SIM\",\r\n            \"data\": [\r\n                {\r\n                    \"item\": \"Es Dual SIM\",\r\n                    \"value\": \"No\"\r\n                },\r\n                {\r\n                    \"item\": \"Cantidad de ranuras para tarjeta SIM\",\r\n                    \"value\": \"1\"\r\n                },\r\n                {\r\n                    \"item\": \"Tamaños de tarjeta SIM compatibles\",\r\n                    \"value\": \"Nano-SIM\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"Memoria\",\r\n            \"data\": [\r\n                {\r\n                    \"item\": \"Memoria interna\",\r\n                    \"value\": \"4 GB\"\r\n                },\r\n                {\r\n                    \"item\": \"Memoria RAM\",\r\n                    \"value\": \"512 MB\"\r\n                },\r\n                {\r\n                    \"item\": \"Con ranura para tarjeta de memoria\",\r\n                    \"value\": \"Sí\"\r\n                },\r\n                {\r\n                    \"item\": \"Tipos de tarjeta de memoria\",\r\n                    \"value\": \"Micro-SD\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"Cámara\",\r\n            \"data\": [\r\n                {\r\n                    \"item\": \"Con cámara\",\r\n                    \"value\": \"Sí\"\r\n                },\r\n                {\r\n                    \"item\": \"Cámara Resolución de la cámara trasera principal\",\r\n                    \"value\": \"0.3 Mpx\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Productos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "TOPHYQSOUCHLPPYRDRHQZTZSOT",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Key",
+			"item": [
+				{
+					"name": "Generar Key Endpoint",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"keyName\": \"PUBLICA\",\r\n    \"email\": \"public@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/keys",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"keys"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Registrar una Categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hogar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Storage",
+			"item": [
+				{
+					"name": "Cargar Archivos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/cris_/OneDrive/Imágenes/yardsale/pexels-photo-3031670.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/storage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"storage"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
