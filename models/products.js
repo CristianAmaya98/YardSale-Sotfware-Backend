@@ -8,7 +8,12 @@ const ProductScheme = new mongoose.Schema(
         type: String
       },
       image: {
-        type: mongoose.Types.ObjectId
+        url: {
+          type: String
+        },
+        id: {
+          type: mongoose.Types.ObjectId
+        }
       },
       price: {
         type: String
